@@ -6,13 +6,31 @@ on:
 
 
 jobs:
-    demo-job:
+    job-extract:
         runs-on: ubuntu-latest
 
         steps:
              - name: checkout code
                uses: actions/checkout@v2
             
-             - name: print message
-               run: echo "welcome to yz"
+             - name: run e.py
+               run: python e.py
         
+    job-transform:
+        runs-on: ubuntu-latest
+
+        steps: 
+            - name: checkout code
+              uses: actions/checkout@v2
+
+            - name: run t.py
+              run: python t.py
+              
+    job-load:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v2
+            - name: run l.py
+              run: python l.py
