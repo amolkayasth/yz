@@ -1,1 +1,0 @@
-print("load thr data")
