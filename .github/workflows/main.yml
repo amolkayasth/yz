@@ -12,6 +12,8 @@ jobs:
         steps:
              - name: checkout code
                uses: actions/checkout@v2
+             - name: List all files
+               run: ls -R   
             
              - name: run e.py
                run: python e.py
@@ -22,6 +24,9 @@ jobs:
         steps: 
             - name: checkout code
               uses: actions/checkout@v2
+            - name: List all files
+              run: ls -R   
+              
 
             - name: run t.py
               run: python t.py
@@ -32,6 +37,8 @@ jobs:
         steps:
             - name: checkout code
               uses: actions/checkout@v2
+            - name: List all files
+              run: ls -R   
+            
             - name: run l.py
               run: python l.py
-              
