@@ -1,7 +1,9 @@
 name: ak
 on:
-    branches:
+    push:
+     branches:
         - main
+
 
 jobs:
     demo-job:
